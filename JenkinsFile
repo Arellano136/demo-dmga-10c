@@ -12,7 +12,7 @@ pipeline {
         }
 
         // Eliminar las imágenes creadas por ese proyecto
-        stage('Eliminando imágenes anteriores...') {
+        stage('Eliminando imágenes anteriores') {
             steps {
                 bat '''
                     for /f "tokens=*" %%i in ('docker images --filter "label=com.docker.compose.project=demo" -q') do (
